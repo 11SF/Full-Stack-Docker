@@ -10,15 +10,16 @@ app.use(cors());
 app.use(express.json())
 
 
-app.get('/api/getmessage', (req,res) => {
+app.get('/api/getmessage', (req, res) => {
     res.json({
-        "status" : true,
-        "data" : "Hello World"
+        "status": true,
+        "data": "Hello World",
+        "message": "OKAY"
     })
 })
 
-app.get('/getuser', async (req,res) => {
-    let resp = await student.find({id: 1 });
+app.get('/getuser', async (req, res) => {
+    let resp = await student.find({ id: 1 });
     console.log(resp);
 })
 
